@@ -1,9 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import General from "./General.jsx";
 import Education from "./Education.jsx";
+import Experience from "./Experience.jsx";
 import "./../styles/index.css";
 
 function App() {
@@ -18,6 +17,7 @@ function App() {
 
   const generalProps = { isEditMode, general, setGeneral };
   const educationProps = { isEditMode, educations, setEducations, uuid };
+  const experienceProps = { isEditMode, experiences, setExperiences, uuid };
 
   return (
     <main className="flex flex-col items-center min-h-screen">
@@ -32,79 +32,7 @@ function App() {
         </button>
         <General {...generalProps} />
         <Education {...educationProps} />
-        {/* VIEW TEMPLATES - start */}
-        {/* <div className="mt-3">
-          <h2 className="text-2xl font-bold uppercase">Experience</h2>
-          <div className="mb-3">
-            <p className="">Undisclosed Position @ Undisclosed Company</p>
-            <p className="">Undisclosed Date - Undisclosed Date</p>
-            <p className="">Summary of Responsibilities</p>
-          </div>
-        </div> */}
-        {/* VIEW TEMPLATES - end */}
-        {/* EDIT TEMPLATES - start */}
-        {/* <div className="mt-6 mb-3">
-          <h2 className="text-2xl font-bold uppercase">Experience</h2>
-          <div className="mb-8">
-            <h2 className="text-lg italic">Experience 1</h2>
-            <div className="mb-2">
-              <label htmlFor="experience-position-title" className="">Title of Position:</label>
-              <br />
-              <input
-                type="text"
-                name="experience-position-title"
-                id="experience-position-title"
-                className="border-black border-2 rounded-lg p-2"
-                required
-              />
-            </div>
-            <div className="mb-2">
-              <label htmlFor="company-name" className="">Company:</label>
-              <br />
-              <input
-                type="text"
-                name="company-name"
-                id="company-name"
-                className="border-black border-2 rounded-lg p-2"
-                required
-              />
-            </div>
-            <div className="mb-2">
-              <label htmlFor="experience-start-date" className="">Start Date:</label>
-              <br />
-              <input
-                type="text"
-                name="experience-start-date"
-                id="experience-start-date"
-                className="border-black border-2 rounded-lg p-2"
-                required
-              />
-            </div>
-            <div className="mb-2">
-              <label htmlFor="education-end-date" className="">End Date:</label>
-              <br />
-              <input
-                type="text"
-                name="education-end-date"
-                id="education-end-date"
-                className="border-black border-2 rounded-lg p-2"
-                required
-              />
-            </div>
-            <div className="mb-2">
-              <label htmlFor="experience-responsibilities" className="">Summary of Responsibilities:</label>
-              <br />
-              <textarea
-                name="experience-responsibilities"
-                id="experience-responsibilities"
-                className="border-black border-2 rounded-lg p-2"
-              ></textarea>
-            </div>
-            <button type="button" className="border-black border-2 rounded-lg p-2 bg-[#e9e9ed] mt-2">Delete</button>
-          </div>
-          <button type="button" className="border-black border-2 rounded-lg p-2 bg-[#e9e9ed]">Add Experience</button>
-        </div> */}
-        {/* EDIT TEMPLATES - end */}
+        <Experience {...experienceProps} />
         <button
           type="button"
           className="border-black border-2 rounded-lg p-2 w-full bg-[#e9e9ed]"

@@ -12,7 +12,7 @@ export const dummyEducation = {
 };
 
 export const dummyExperience = {
-  positionTitle: "Undiclosed Position",
+  positionTitle: "Undisclosed Position",
   companyName: "Undisclosed Company",
   startDate: "Undisclosed Date",
   endDate: "Undisclosed Date",

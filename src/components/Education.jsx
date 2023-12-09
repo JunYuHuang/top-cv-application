@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { dummyEducation as dummy } from "../assets/dummyData.js";
 
@@ -190,7 +189,6 @@ function EducationEdit(props) {
     <>
       <div className="mt-6 mb-3">
         <h2 className="text-2xl font-bold uppercase">Education</h2>
-        {/* TODO - return a component for every education*/}
         {educations.map((education, i) => (
           <EducationEditItem
             key={education.id}
