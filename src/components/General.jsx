@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { dummyGeneral as dummy } from "./../assets/dummyData.js";
+import { dummyGeneral as dummy } from "../assets/dummyData.js";
 
-function GeneralSectionView(props) {
+function GeneralView(props) {
   const { general } = props;
 
   return (
     <>
-      <div className="mt-6">
+      <div className="mt-6 mb-8">
         <h2 className="text-5xl font-bold uppercase">
           {general.fullName ? general.fullName : dummy.fullName}
         </h2>
@@ -22,7 +22,7 @@ function GeneralSectionView(props) {
   );
 }
 
-function GeneralSectionEdit(props) {
+function GeneralEdit(props) {
   const { general, setGeneral } = props;
 
   function handleFullNameChange(e) {
@@ -108,12 +108,12 @@ function GeneralSectionEdit(props) {
   );
 }
 
-function GeneralSection(props) {
+function General(props) {
   return props.isEditMode ? (
-    <GeneralSectionEdit {...props} />
+    <GeneralEdit {...props} />
   ) : (
-    <GeneralSectionView {...props} />
+    <GeneralView {...props} />
   );
 }
 
-export default GeneralSection;
+export default General;

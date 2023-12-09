@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import GeneralSection from "./GeneralSection.jsx";
+import General from "./General.jsx";
 import "./../styles/index.css";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
     setIsEditMode(!isEditMode);
   }
 
-  const generalSectionProps = { isEditMode, general, setGeneral };
+  const generalProps = { isEditMode, general, setGeneral };
 
   return (
     <main className="flex flex-col items-center min-h-screen">
@@ -28,7 +28,7 @@ function App() {
         >
           {isEditMode ? "View CV" : "Edit CV"}
         </button>
-        <GeneralSection {...generalSectionProps} />
+        <General {...generalProps} />
         {/* VIEW TEMPLATES - start */}
         {/* <div className="mt-3">
           <h2 className="text-2xl font-bold uppercase">Education</h2>
